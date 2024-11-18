@@ -9,7 +9,7 @@ const App = () => {
 
     try {
       console.log(action);
-      const response = await fetch('http://192.168.1.7:8000/control', {
+      const response = await fetch('http://192.168.126.209:8000/control', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -23,7 +23,7 @@ const App = () => {
 
         // Если поток запускается, обновляем URL (для перезагрузки потока)
         if (!isPlaying) {
-          setStreamUrl(`http://192.168.1.7:8000/stream?time=${Date.now()}`);  // Добавляем уникальный параметр времени
+          setStreamUrl(`http://192.168.126.209:8000/stream?time=${Date.now()}`);  // Добавляем уникальный параметр времени
         }
       }
     } catch (error) {
